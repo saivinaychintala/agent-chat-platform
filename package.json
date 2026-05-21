@@ -1,0 +1,40 @@
+{
+  "name": "agent-chat-platform",
+  "version": "1.0.0",
+  "description": "Full-stack AI agent chat platform with real-time messaging, session management, and WebSocket support",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:backend\" \"pnpm dev:frontend\"",
+    "dev:backend": "pnpm --filter backend start:dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "build": "pnpm -r build",
+    "build:backend": "pnpm --filter backend build",
+    "build:frontend": "pnpm --filter frontend build",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "clean": "pnpm -r clean && rm -rf node_modules"
+  },
+  "keywords": [
+    "nestjs",
+    "react",
+    "websocket",
+    "mongodb",
+    "redis",
+    "chat",
+    "ai",
+    "agents",
+    "full-stack"
+  ],
+  "author": "Vinay Chintala",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

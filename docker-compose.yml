@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: agent-chat-mongodb
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: agent-chat-platform
+
+  redis:
+    image: redis:7-alpine
+    container_name: agent-chat-redis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+
+  # Uncomment to run backend in Docker
+  # backend:
+  #   build:
+  #     context: ./apps/backend
+  #     dockerfile: Dockerfile
+  #   container_name: agent-chat-backend
+  #   restart: unless-stopped
+  #   ports:
+  #     - '3000:3000'
+  #   environment:
+  #     - NODE_ENV=production
+  #     - MONGODB_URI=mongodb://mongodb:27017/agent-chat-platform
+  #     - REDIS_HOST=redis
+  #     - REDIS_PORT=6379
+  #   depends_on:
+  #     - mongodb
+  #     - redis
+
+  # Uncomment to run frontend in Docker
+  # frontend:
+  #   build:
+  #     context: ./apps/frontend
+  #     dockerfile: Dockerfile
+  #   container_name: agent-chat-frontend
+  #   restart: unless-stopped
+  #   ports:
+  #     - '5173:80'
+  #   depends_on:
+  #     - backend
+
+volumes:
+  mongodb_data:
+  redis_data:
