@@ -1,6 +1,14 @@
-# Agent Chat Platform
+# 🤖 Agent Chat Platform
 
-A full-stack AI agent chat platform with real-time messaging, session management, and WebSocket support. Built with NestJS, MongoDB, Redis, Socket.IO, React, and TypeScript.
+[![GitHub Stars](https://img.shields.io/github/stars/saivinaychintala/agent-chat-platform?style=for-the-badge)](https://github.com/saivinaychintala/agent-chat-platform/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/saivinaychintala/agent-chat-platform?style=for-the-badge)](https://github.com/saivinaychintala/agent-chat-platform/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/saivinaychintala/agent-chat-platform?style=for-the-badge)](https://github.com/saivinaychintala/agent-chat-platform/issues)
+[![GitHub License](https://img.shields.io/github/license/saivinaychintala/agent-chat-platform?style=for-the-badge)](https://github.com/saivinaychintala/agent-chat-platform/blob/main/LICENSE)
+
+[![CI/CD Pipeline](https://github.com/saivinaychintala/agent-chat-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/saivinaychintala/agent-chat-platform/actions/workflows/ci.yml)
+[![Deploy](https://github.com/saivinaychintala/agent-chat-platform/actions/workflows/deploy.yml/badge.svg)](https://github.com/saivinaychintala/agent-chat-platform/actions/workflows/deploy.yml)
+
+A production-ready, full-stack AI agent chat platform with real-time messaging, session management, and WebSocket support. Built with NestJS, MongoDB, Redis, Socket.IO, React, and TypeScript.
 
 ## 🚀 Features
 
